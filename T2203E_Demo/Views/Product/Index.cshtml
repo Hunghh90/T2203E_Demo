@@ -1,0 +1,29 @@
+﻿@{
+    var products = ViewBag.product;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<table class="table">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Thumbnail</th>
+    </thead>
+    <tbody>
+        @foreach (var p in products)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+                <td>@p.Price</td>
+                <td>@p.Thumbnail</td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+    
